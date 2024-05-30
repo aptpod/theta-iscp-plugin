@@ -1,0 +1,162 @@
+# BrokerStreamApi
+
+All URIs are relative to *https://example.intdash.jp/api*
+
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**projectStream**](BrokerStreamApi.md#projectStream) | **GET** /v1/projects/{project_uuid}/stream | Get Project Realtime Streaming Data |
+| [**stream**](BrokerStreamApi.md#stream) | **GET** /v1/stream | Get Realtime Streaming Data |
+
+
+<a id="projectStream"></a>
+# **projectStream**
+> projectStream(projectUuid)
+
+Get Project Realtime Streaming Data
+
+WebSocketを使ってリアルタイムデータを取得します。  同じくWebSocketを使ってリアルタイムデータを扱う &#x60;/v1/ws/measurements&#x60; では、 iSCP (intdash Stream Control Protocol)を使用しますが、 本エンドポイントではJSONとしてデータポイントを取得することができます。 ## クエリパラメータ  | パラメータ名     | 型                         | 必須       | デフォルト | 説明  | | ---------------- | -------------------------- | ---------- | ---------- | ----- | | flush_interval   | string                     | true       | -          | メッセージがフラッシュされる間隔を指定します。 単位は\&quot;ns\&quot;、\&quot;us\&quot; (または\&quot;µs\&quot;)、\&quot;ms\&quot;、\&quot;s\&quot;、\&quot;m\&quot;、\&quot;h\&quot;のいずれかを使用してください （参考: [Goのtimeパッケージ](https://golang.org/pkg/time/#ParseDuration)）。 指定がない場合は、メッセージごとにフラッシュされます。 |  ## メッセージのフォーマット ###  JSON Lines リクエストメッセージおよびレスポンスメッセージには [JSON lines](http://jsonlines.org/) 形式を使用します。 1つのメッセージが1行です。  例: &#x60;&#x60;&#x60; { \&quot;type\&quot; : \&quot;message_type\&quot;, \&quot;contents\&quot; : { depends on message_type }} { \&quot;type\&quot; : \&quot;message_type\&quot;, \&quot;contents\&quot; : { depends on message_type }} { \&quot;type\&quot; : \&quot;message_type\&quot;, \&quot;contents\&quot; : { depends on message_type }} { \&quot;type\&quot; : \&quot;message_type\&quot;, \&quot;contents\&quot; : { depends on message_type }} { \&quot;type\&quot; : \&quot;message_type\&quot;, \&quot;contents\&quot; : { depends on message_type }} . .  &#x60;&#x60;&#x60; 注意: メッセージに改行を含むことはできません。 改行が入ったメッセージの例（悪い例）: &#x60;&#x60;&#x60; {   \&quot;type\&quot; : \&quot;message_type\&quot;,   \&quot;contents\&quot; : { depends on message_type } } &#x60;&#x60;&#x60;  メッセージには、 &#x60;type&#x60; 属性および &#x60;contents&#x60; 属性が必要です。 &#x60;contents&#x60; のスキーマは、 &#x60;type&#x60; により決定されます。 ## ダウンストリーム開始リクエスト ### ダウンストリーム開始リクエストメッセージのスキーマ | 属性名           | 型                       | 必須       | デフォルト        | 説明    | | ---------------- | ------------------------ | ---------- | ----------------- | ------- | | id               | number                   | false      | -                 | idに指定した値は、レスポンスの &#x60;ack&#x60; 属性として返ります。 | | type             | string                   | true       | &#x60;\&quot;open_downstream\&quot;&#x60; | 固定値  | | contents         | object（次の表を参照）   | true       | -                 |         |  ### ダウンストリーム開始リクエスト内 &#x60;contents&#x60; のスキーマ | 属性名           | 型                       | 必須       | デフォルト         | 説明   | | ---------------- | ------------------------ | ---------- | ------------------ | ------ | | edge             | string                   | true       | -                  | データの送信元エッジを、エッジのUUIDまたはエッジの名前で指定します。 最初に、一致するエッジUUIDが検索され、一致するエッジUUIDがなければ一致する名前が検索されます。 | | filter           | string array             | false      | &#x60;[]&#x60;               | 「フィルター」を参照してください。 |  ### フィルター データコードとデータ名を指定することにより、指定にマッチしたデータポイントだけを受信することができます。 ただし、メタデータのデータポイントは、フィルターの設定に関係なくすべて受信されます。  フィルターは以下のフォーマットで設定します: &#x60;&lt;型コード&gt;:&lt;データ名&gt;&#x60; データコードについては、後述の 時系列データのペイロードフォーマット を参照してください。 フィルター設定文字列の各セグメントにはワイルドカード( &#x60;**&#x60; )を使用することができます。  例: - 型コードが &#x60;can_data_field&#x60; のデータポイント（CAN）を受信する -&gt; &#x60;can_data_field:**&#x60; - 型コードが &#x60;string/&#x60; で始まるデータポイントを受信する（&#x60;string/json&#x60; 、 &#x60;string/csv&#x60; など） -&gt; &#x60;string/_**:**&#x60; - 文字列のデータポイントのうち、データ名が &#x60;my-string&#x60; のものを受信する -&gt; &#x60;string:my-string&#x60;  &#x60;filter&#x60; として空の配列が指定された場合は、すべてのデータポイントを受信します。  ### ダウンストリーム開始リクエストの例 リクエスト: &#x60;&#x60;&#x60; { \&quot;type\&quot; : \&quot;open_downstream\&quot;, \&quot;contents\&quot; : { \&quot;edge\&quot; : \&quot;edge_name_or_uuid\&quot;, \&quot;filter\&quot; : [\&quot;string:a/b\&quot;] } } &#x60;&#x60;&#x60; レスポンス（レスポンスの詳細については、「レスポンス」を参照してください）:  &#x60;&#x60;&#x60; { \&quot;type\&quot; : \&quot;response\&quot;, \&quot;contents\&quot;: { \&quot;code\&quot; : 10000, \&quot;message\&quot;: \&quot;succeed: open downstream\&quot; } } &#x60;&#x60;&#x60;  ## ダウンストリーム更新リクエスト ### ダウンストリーム更新リクエストメッセージのスキーマ  | 属性名           | 型                       | 必須       | デフォルト        | 説明    | | ---------------- | ------------------------ | ---------- | ----------------- | ------- | | id               | number                   | false      | -                 | idに指定した値は、レスポンスの &#x60;ack&#x60; 属性として返ります。 | | type             | string                   | true       | &#x60;\&quot;update_downstream\&quot;&#x60;  | 固定値  | | contents         | object（次の表を参照）   | true       | -                 |         |  ### ダウンストリーム更新リクエスト内 &#x60;contents&#x60; のスキーマ  | 属性名           | 型                       | 必須       | デフォルト        | 説明    | | ---------------- | ------------------------ | ---------- | ----------------- | ------- | | filter           | string array             | true       | -                 |「フィルター」を参照してください。 |  ### ダウンストリーム更新リクエストの例 フィルターを指定する場合のリクエスト: &#x60;&#x60;&#x60; { \&quot;type\&quot; : \&quot;update_downstream\&quot;, \&quot;contents\&quot; : { \&quot;filter\&quot; : [\&quot;string:a/b\&quot;] } } &#x60;&#x60;&#x60;  フィルターを指定せずすべてのデータポイントを受信する場合のリクエスト: &#x60;&#x60;&#x60; { \&quot;type\&quot; : \&quot;update_downstream\&quot;, \&quot;contents\&quot; : { \&quot;filter\&quot; : [] } } &#x60;&#x60;&#x60;  レスポンス（レスポンスの詳細については、「レスポンス」を参照してください）:  &#x60;&#x60;&#x60; { \&quot;type\&quot; : \&quot;response\&quot;, \&quot;contents\&quot;: { \&quot;code\&quot; : 10000, \&quot;message\&quot;: \&quot;succeed: update downstream\&quot; } } &#x60;&#x60;&#x60;  ## ダウンストリーム終了リクエスト ### ダウンストリーム終了リクエストメッセージのスキーマ  | 属性名           | 型                       | 必須       | デフォルト        | 説明    | | ---------------- | ------------------------ | ---------- | ----------------- | ------- | | id               | number                   | false      | -                 | idに指定した値は、レスポンスの &#x60;ack&#x60; 属性として返ります。  | | type             | string                   | true       | &#x60;\&quot;close_downstream\&quot;&#x60; | 固定値|  ### ダウンストリーム終了リクエストの例 リクエスト: &#x60;&#x60;&#x60; { \&quot;type\&quot; : \&quot;close_downstream\&quot;} &#x60;&#x60;&#x60; レスポンス（レスポンスの詳細については、「レスポンス」を参照してください）: &#x60;&#x60;&#x60; { \&quot;type\&quot; : \&quot;response\&quot;, \&quot;contents\&quot;: { \&quot;code\&quot; : 10000, \&quot;message\&quot;: \&quot;succeed: close downstream\&quot; } } &#x60;&#x60;&#x60;  ## レスポンスメッセージ リクエストの処理結果が返却されます。 ### レスポンスメッセージのスキーマ  | 属性名           | 型                       | 必須       | デフォルト        | 説明    | | ---------------- | ------------------------ | ---------- | ----------------- | ----- | | type             | string                   | true       | &#x60;\&quot;response\&quot;&#x60;      | 固定値| | ack              | number                   | false      | -                 | リクエストで &#x60;id&#x60; が指定されていた場合、その値 | | contents         | object（次の表を参照）   | true       | -                 |       |  ### レスポンス内 &#x60;contents&#x60; のスキーマ  | 属性名           | 型                       | 必須       | デフォルト        | 説明    | | ---------------- | ------------------------ | ---------- | ----------------- | ----- | | code             | number                   | true       | -                 | 10000 &lt; code &lt; 20000 の場合、成功。 20000 &lt; code &lt; 30000 の場合、不正なリクエスト。50000 &lt; code の場合、予期しないエラー | | message          | string                   | true       | -                 | リクエストで &#x60;id&#x60; が指定されていた場合、その値 |  ### レスポンスの例 &#x60;&#x60;&#x60; { \&quot;type\&quot; : \&quot;response\&quot;, \&quot;contents\&quot;: { \&quot;code\&quot; : 10000, \&quot;message\&quot;: \&quot;succeed: open downstream\&quot; } } &#x60;&#x60;&#x60;  リクエストで &#x60;id&#x60; が指定されている場合のレスポンス例（ &#x60;id&#x60; の値が &#x60;ack&#x60; として返ります）:  &#x60;&#x60;&#x60; { \&quot;ack\&quot;: 1, \&quot;type\&quot; : \&quot;response\&quot;, \&quot;contents\&quot;: { \&quot;code\&quot; : 10000, \&quot;message\&quot;: \&quot;succeed: open downstream\&quot; } } &#x60;&#x60;&#x60; # 時系列データのペイロードフォーマット 時系列データポイントが格納するペイロードのフォーマットです。各データ型に対する &#x60;contents&#x60;のフォーマットは [このページ](https://git.aptpod.co.jp/intdash-protocol/dataformat/-/tree/master/data) を参照してください。 ## データ型 各データバイナリには、ペイロードのフォーマットを示すデータ型が付与されます。各データ型には、型を識別するためのコード名が割り当てられます。 ## 標準データ型 単一のデータを格納するデータ型です。  |          名称           |  コード   | バイト長 |             説明             | | :---------------------- | :-------- | :------: | :--------------------------- | | Bytes     | &#x60;bytes&#x60;   |   可変   | フォーマットなしバイト列     | | String    | &#x60;string&#x60;  |   可変   | フォーマットなし文字列       | | Float64   | &#x60;float64&#x60; |    8     | IEEE754 64ビット浮動小数点数 | | Int64     | &#x60;int64&#x60;   |    8     | 符号付き 64ビット整数        | | Bool      | &#x60;bool&#x60;    |    1     | 真偽値                       |  ## メディアデータ型 メディア（動画/音声）関連のデータを格納するデータ型です。  |          名称           |    コード    | バイト長 |            説明            | | :---------------------- | :----------- | :------: | :------------------------- | | JPEG | &#x60;video/jpeg&#x60; |   可変   | JPEG 形式の画像データ      | | H264 | &#x60;video/h264&#x60; |   可変   | H264 形式の映像データ      |  ### 拡張バイナリ型 フォーマット付きのバイナリデータを格納するデータ型です。  |                       名称                        |      コード       | バイト長 |                   説明                    | | :------------------------------------------------ | :---------------- | :------: | :---------------------------------------- | | BSON                                 | &#x60;bson&#x60;            |   可変   | BSON フォーマット                         | | CAN Frame                            | &#x60;can_frame&#x60;       |   可変   | CAN フレーム フォーマット                 | | CAN Data Field                       | &#x60;can_data_field&#x60;  |   可変   | CAN データフィールド フォーマット         | | MAVLink1 Packet                      | &#x60;mavlink1_packet&#x60; |   可変   | MAVLink パケット フォーマット             | | Generic (非推奨)                     | &#x60;generic&#x60;         |   可変   | iSCPv1互換 汎用フォーマット               | | Controlpad (非推奨)                  | &#x60;control_pad&#x60;     |   可変   | iSCPv1互換 コントロールパッドフォーマット | | GeneralSensor (非推奨)               | &#x60;general_sensor&#x60;  |   可変   | iSCPv1互換 汎用センサーフォーマット       |  ### 拡張文字列型 フォーマット付きの文字列データを格納するデータ型です。  |           名称           |    コード     | バイト長 |       説明        | | :----------------------- | :------------ | :------: | :---------------- | | JSON | &#x60;string/json&#x60;     |   可変   | JSON フォーマット | | CSV   | &#x60;string/csv&#x60;     |   可変   | CSV フォーマット  | | NMEA | &#x60;string/nmea&#x60;     |   可変   | NMEA フォーマット |
+
+### Example
+```java
+// Import classes:
+import com.aptpod.ApiClient;
+import com.aptpod.ApiException;
+import com.aptpod.Configuration;
+import com.aptpod.auth.*;
+import com.aptpod.models.*;
+import com.aptpod.intdash.BrokerStreamApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://example.intdash.jp/api");
+    
+    // Configure API key authorization: IntdashToken
+    ApiKeyAuth IntdashToken = (ApiKeyAuth) defaultClient.getAuthentication("IntdashToken");
+    IntdashToken.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //IntdashToken.setApiKeyPrefix("Token");
+
+    // Configure API key authorization: OAuth2TokenInCookie
+    ApiKeyAuth OAuth2TokenInCookie = (ApiKeyAuth) defaultClient.getAuthentication("OAuth2TokenInCookie");
+    OAuth2TokenInCookie.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //OAuth2TokenInCookie.setApiKeyPrefix("Token");
+
+    // Configure HTTP bearer authorization: OAuth2TokenInHeader
+    HttpBearerAuth OAuth2TokenInHeader = (HttpBearerAuth) defaultClient.getAuthentication("OAuth2TokenInHeader");
+    OAuth2TokenInHeader.setBearerToken("BEARER TOKEN");
+
+    BrokerStreamApi apiInstance = new BrokerStreamApi(defaultClient);
+    String projectUuid = "c78ce0c1-eb57-4f93-a087-ee3b7cee5e06"; // String | プロジェクトのUUID
+    try {
+      apiInstance.projectStream(projectUuid);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling BrokerStreamApi#projectStream");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **projectUuid** | **String**| プロジェクトのUUID | |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[IntdashToken](../README.md#IntdashToken), [OAuth2TokenInCookie](../README.md#OAuth2TokenInCookie), [OAuth2TokenInHeader](../README.md#OAuth2TokenInHeader)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **101** | Switching Protocols. |  -  |
+
+<a id="stream"></a>
+# **stream**
+> stream()
+
+Get Realtime Streaming Data
+
+（Deprecated。このエンドポイントでなく &#x60;/projects/00000000-0000-0000-0000-000000000000/stream&#x60; を使用してください）  WebSocketを使ってリアルタイムデータを取得します。    同じくWebSocketを使ってリアルタイムデータを扱う &#x60;/v1/ws/measurements&#x60; では、  iSCP (intdash Stream Control Protocol)を使用しますが、  本エンドポイントではJSONとしてデータポイントを取得することができます。   ## クエリパラメータ    | パラメータ名     | 型                         | 必須       | デフォルト | 説明  |   | ---------------- | -------------------------- | ---------- | ---------- | ----- |   | flush_interval   | string                     | true       | -          |  メッセージがフラッシュされる間隔を指定します。  単位は\&quot;ns\&quot;、\&quot;us\&quot; (または\&quot;µs\&quot;)、\&quot;ms\&quot;、\&quot;s\&quot;、\&quot;m\&quot;、\&quot;h\&quot;のいずれかを使用してください  （参考: [Goのtimeパッケージ](https://golang.org/pkg/time/#ParseDuration)）。  指定がない場合は、メッセージごとにフラッシュされます。 |    ## メッセージのフォーマット   ###  JSON Lines   リクエストメッセージおよびレスポンスメッセージには [JSON lines](http://jsonlines.org/) 形式を使用します。   1つのメッセージが1行です。    例:   &#x60;&#x60;&#x60;   { \&quot;type\&quot; : \&quot;message_type\&quot;, \&quot;contents\&quot; : { depends on message_type }}   { \&quot;type\&quot; : \&quot;message_type\&quot;, \&quot;contents\&quot; : { depends on message_type }}   { \&quot;type\&quot; : \&quot;message_type\&quot;, \&quot;contents\&quot; : { depends on message_type }}   { \&quot;type\&quot; : \&quot;message_type\&quot;, \&quot;contents\&quot; : { depends on message_type }}   { \&quot;type\&quot; : \&quot;message_type\&quot;, \&quot;contents\&quot; : { depends on message_type }}   .   .    &#x60;&#x60;&#x60;   注意: メッセージに改行を含むことはできません。   改行が入ったメッセージの例（悪い例）:   &#x60;&#x60;&#x60;   {    \&quot;type\&quot; : \&quot;message_type\&quot;,    \&quot;contents\&quot; : { depends on message_type }  }   &#x60;&#x60;&#x60;    メッセージには、 &#x60;type&#x60; 属性および &#x60;contents&#x60; 属性が必要です。  &#x60;contents&#x60; のスキーマは、 &#x60;type&#x60; により決定されます。   ## ダウンストリーム開始リクエスト   ### ダウンストリーム開始リクエストメッセージのスキーマ   | 属性名           | 型                       | 必須       | デフォルト        | 説明    |   | ---------------- | ------------------------ | ---------- | ----------------- | ------- |   | id               | number                   | false      | -                 | idに指定した値は、レスポンスの &#x60;ack&#x60; 属性として返ります。 |   | type             | string                   | true       | &#x60;\&quot;open_downstream\&quot;&#x60; | 固定値  |   | contents         | object（次の表を参照）   | true       | -                 |         |    ### ダウンストリーム開始リクエスト内 &#x60;contents&#x60; のスキーマ   | 属性名           | 型                       | 必須       | デフォルト         | 説明   |   | ---------------- | ------------------------ | ---------- | ------------------ | ------ |   | edge             | string                   | true       | -                  | データの送信元エッジを、エッジのUUIDまたはエッジの名前で指定します。  最初に、一致するエッジUUIDが検索され、一致するエッジUUIDがなければ一致する名前が検索されます。 |   | filter           | string array             | false      | &#x60;[]&#x60;               | 「フィルター」を参照してください。 |    ### フィルター   データコードとデータ名を指定することにより、指定にマッチしたデータポイントだけを受信することができます。   ただし、メタデータのデータポイントは、フィルターの設定に関係なくすべて受信されます。    フィルターは以下のフォーマットで設定します: &#x60;&lt;型コード&gt;:&lt;データ名&gt;&#x60;   データコードについては、後述の 時系列データのペイロードフォーマット を参照してください。   フィルター設定文字列の各セグメントにはワイルドカード( &#x60;**&#x60; )を使用することができます。    例:   - 型コードが &#x60;can_data_field&#x60; のデータポイント（CAN）を受信する -&gt; &#x60;can_data_field:**&#x60;   - 型コードが &#x60;string/&#x60; で始まるデータポイントを受信する（&#x60;string/json&#x60; 、 &#x60;string/csv&#x60; など） -&gt; &#x60;string/_**:**&#x60;   - 文字列のデータポイントのうち、データ名が &#x60;my-string&#x60; のものを受信する -&gt; &#x60;string:my-string&#x60;    &#x60;filter&#x60; として空の配列が指定された場合は、すべてのデータポイントを受信します。    ### ダウンストリーム開始リクエストの例   リクエスト:   &#x60;&#x60;&#x60;   { \&quot;type\&quot; : \&quot;open_downstream\&quot;, \&quot;contents\&quot; : { \&quot;edge\&quot; : \&quot;edge_name_or_uuid\&quot;, \&quot;filter\&quot; : [\&quot;string:a/b\&quot;] } }   &#x60;&#x60;&#x60;   レスポンス（レスポンスの詳細については、「レスポンス」を参照してください）:    &#x60;&#x60;&#x60;   { \&quot;type\&quot; : \&quot;response\&quot;, \&quot;contents\&quot;: { \&quot;code\&quot; : 10000, \&quot;message\&quot;: \&quot;succeed: open downstream\&quot; } }   &#x60;&#x60;&#x60;    ## ダウンストリーム更新リクエスト   ### ダウンストリーム更新リクエストメッセージのスキーマ    | 属性名           | 型                       | 必須       | デフォルト        | 説明    |   | ---------------- | ------------------------ | ---------- | ----------------- | ------- |   | id               | number                   | false      | -                 | idに指定した値は、レスポンスの &#x60;ack&#x60; 属性として返ります。 |   | type             | string                   | true       | &#x60;\&quot;update_downstream\&quot;&#x60;  | 固定値  |   | contents         | object（次の表を参照）   | true       | -                 |         |    ### ダウンストリーム更新リクエスト内 &#x60;contents&#x60; のスキーマ    | 属性名           | 型                       | 必須       | デフォルト        | 説明    |   | ---------------- | ------------------------ | ---------- | ----------------- | ------- |   | filter           | string array             | true       | -                 |「フィルター」を参照してください。 |    ### ダウンストリーム更新リクエストの例   フィルターを指定する場合のリクエスト:   &#x60;&#x60;&#x60;   { \&quot;type\&quot; : \&quot;update_downstream\&quot;, \&quot;contents\&quot; : { \&quot;filter\&quot; : [\&quot;string:a/b\&quot;] } }   &#x60;&#x60;&#x60;    フィルターを指定せずすべてのデータポイントを受信する場合のリクエスト:   &#x60;&#x60;&#x60;   { \&quot;type\&quot; : \&quot;update_downstream\&quot;, \&quot;contents\&quot; : { \&quot;filter\&quot; : [] } }   &#x60;&#x60;&#x60;    レスポンス（レスポンスの詳細については、「レスポンス」を参照してください）:    &#x60;&#x60;&#x60;   { \&quot;type\&quot; : \&quot;response\&quot;, \&quot;contents\&quot;: { \&quot;code\&quot; : 10000, \&quot;message\&quot;: \&quot;succeed:  update downstream\&quot; } }   &#x60;&#x60;&#x60;    ## ダウンストリーム終了リクエスト   ### ダウンストリーム終了リクエストメッセージのスキーマ    | 属性名           | 型                       | 必須       | デフォルト        | 説明    |   | ---------------- | ------------------------ | ---------- | ----------------- | ------- |   | id               | number                   | false      | -                 | idに指定した値は、レスポンスの &#x60;ack&#x60; 属性として返ります。  |   | type             | string                   | true       | &#x60;\&quot;close_downstream\&quot;&#x60; | 固定値|    ### ダウンストリーム終了リクエストの例   リクエスト:   &#x60;&#x60;&#x60;   { \&quot;type\&quot; : \&quot;close_downstream\&quot;}   &#x60;&#x60;&#x60;   レスポンス（レスポンスの詳細については、「レスポンス」を参照してください）:   &#x60;&#x60;&#x60;   { \&quot;type\&quot; : \&quot;response\&quot;, \&quot;contents\&quot;: { \&quot;code\&quot; : 10000, \&quot;message\&quot;: \&quot;succeed: close downstream\&quot; } }   &#x60;&#x60;&#x60;    ## レスポンスメッセージ   リクエストの処理結果が返却されます。   ### レスポンスメッセージのスキーマ    | 属性名           | 型                       | 必須       | デフォルト        | 説明    |   | ---------------- | ------------------------ | ---------- | ----------------- | ----- |   | type             | string                   | true       | &#x60;\&quot;response\&quot;&#x60;      | 固定値|   | ack              | number                   | false      | -                 | リクエストで &#x60;id&#x60; が指定されていた場合、その値 |   | contents         | object（次の表を参照）   | true       | -                 |       |    ### レスポンス内 &#x60;contents&#x60; のスキーマ    | 属性名           | 型                       | 必須       | デフォルト        | 説明    |   | ---------------- | ------------------------ | ---------- | ----------------- | ----- |   | code             | number                   | true       | -                 | 10000 &lt; code &lt; 20000 の場合、成功。  20000 &lt; code &lt; 30000 の場合、不正なリクエスト。50000 &lt; code の場合、予期しないエラー |   | message          | string                   | true       | -                 | リクエストで &#x60;id&#x60; が指定されていた場合、その値 |    ### レスポンスの例   &#x60;&#x60;&#x60;   { \&quot;type\&quot; : \&quot;response\&quot;, \&quot;contents\&quot;: { \&quot;code\&quot; : 10000, \&quot;message\&quot;: \&quot;succeed: open downstream\&quot; } }   &#x60;&#x60;&#x60;    リクエストで &#x60;id&#x60; が指定されている場合のレスポンス例（ &#x60;id&#x60; の値が &#x60;ack&#x60; として返ります）:    &#x60;&#x60;&#x60;   { \&quot;ack\&quot;: 1, \&quot;type\&quot; : \&quot;response\&quot;, \&quot;contents\&quot;: { \&quot;code\&quot; : 10000, \&quot;message\&quot;: \&quot;succeed: open downstream\&quot; } }   &#x60;&#x60;&#x60;   # 時系列データのペイロードフォーマット   時系列データポイントが格納するペイロードのフォーマットです。各データ型に対する &#x60;contents&#x60;のフォーマットは [このページ](https://git.aptpod.co.jp/intdash-protocol/dataformat/-/tree/master/data) を参照してください。   ## データ型   各データバイナリには、ペイロードのフォーマットを示すデータ型が付与されます。各データ型には、型を識別するためのコード名が割り当てられます。   ## 標準データ型   単一のデータを格納するデータ型です。    |          名称           |  コード   | バイト長 |             説明             |   | :---------------------- | :-------- | :------: | :--------------------------- |   | Bytes     | &#x60;bytes&#x60;   |   可変   | フォーマットなしバイト列     |   | String    | &#x60;string&#x60;  |   可変   | フォーマットなし文字列       |   | Float64   | &#x60;float64&#x60; |    8     | IEEE754 64ビット浮動小数点数 |   | Int64     | &#x60;int64&#x60;   |    8     | 符号付き 64ビット整数        |   | Bool      | &#x60;bool&#x60;    |    1     | 真偽値                       |    ## メディアデータ型   メディア（動画/音声）関連のデータを格納するデータ型です。    |          名称           |    コード    | バイト長 |            説明            |   | :---------------------- | :----------- | :------: | :------------------------- |   | JPEG | &#x60;video/jpeg&#x60; |   可変   | JPEG 形式の画像データ      |   | H264 | &#x60;video/h264&#x60; |   可変   | H264 形式の映像データ      |    ### 拡張バイナリ型   フォーマット付きのバイナリデータを格納するデータ型です。    |                       名称                        |      コード       | バイト長 |                   説明                    |   | :------------------------------------------------ | :---------------- | :------: | :---------------------------------------- |   | BSON                                 | &#x60;bson&#x60;            |   可変   | BSON フォーマット                         |   | CAN Frame                            | &#x60;can_frame&#x60;       |   可変   | CAN フレーム フォーマット                 |   | CAN Data Field                       | &#x60;can_data_field&#x60;  |   可変   | CAN データフィールド フォーマット         |   | MAVLink1 Packet                      | &#x60;mavlink1_packet&#x60; |   可変   | MAVLink パケット フォーマット             |   | Generic (非推奨)                     | &#x60;generic&#x60;         |   可変   | iSCPv1互換 汎用フォーマット               |   | Controlpad (非推奨)                  | &#x60;control_pad&#x60;     |   可変   | iSCPv1互換 コントロールパッドフォーマット |   | GeneralSensor (非推奨)               | &#x60;general_sensor&#x60;  |   可変   | iSCPv1互換 汎用センサーフォーマット       |    ### 拡張文字列型   フォーマット付きの文字列データを格納するデータ型です。    |           名称           |    コード     | バイト長 |       説明        |   | :----------------------- | :------------ | :------: | :---------------- |   | JSON | &#x60;string/json&#x60;     |   可変   | JSON フォーマット |   | CSV   | &#x60;string/csv&#x60;     |   可変   | CSV フォーマット  |   | NMEA | &#x60;string/nmea&#x60;     |   可変   | NMEA フォーマット |
+
+### Example
+```java
+// Import classes:
+import com.aptpod.ApiClient;
+import com.aptpod.ApiException;
+import com.aptpod.Configuration;
+import com.aptpod.auth.*;
+import com.aptpod.models.*;
+import com.aptpod.intdash.BrokerStreamApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://example.intdash.jp/api");
+    
+    // Configure API key authorization: IntdashToken
+    ApiKeyAuth IntdashToken = (ApiKeyAuth) defaultClient.getAuthentication("IntdashToken");
+    IntdashToken.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //IntdashToken.setApiKeyPrefix("Token");
+
+    // Configure API key authorization: OAuth2TokenInCookie
+    ApiKeyAuth OAuth2TokenInCookie = (ApiKeyAuth) defaultClient.getAuthentication("OAuth2TokenInCookie");
+    OAuth2TokenInCookie.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //OAuth2TokenInCookie.setApiKeyPrefix("Token");
+
+    // Configure HTTP bearer authorization: OAuth2TokenInHeader
+    HttpBearerAuth OAuth2TokenInHeader = (HttpBearerAuth) defaultClient.getAuthentication("OAuth2TokenInHeader");
+    OAuth2TokenInHeader.setBearerToken("BEARER TOKEN");
+
+    BrokerStreamApi apiInstance = new BrokerStreamApi(defaultClient);
+    try {
+      apiInstance.stream();
+    } catch (ApiException e) {
+      System.err.println("Exception when calling BrokerStreamApi#stream");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[IntdashToken](../README.md#IntdashToken), [OAuth2TokenInCookie](../README.md#OAuth2TokenInCookie), [OAuth2TokenInHeader](../README.md#OAuth2TokenInHeader)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **101** | Switching Protocols. |  -  |
+

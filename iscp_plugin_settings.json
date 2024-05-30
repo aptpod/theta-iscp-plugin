@@ -1,0 +1,20 @@
+{
+    "intdash" : {
+        "server_url" : "https://example.com",
+        "server_path" : "/api",
+        "node_client_id" : "00000000-0000-0000-0000-000000000000",
+        "node_client_secret" : "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "save_to_server" : false
+    },
+    "video" : {
+        "enabled" : true,
+        "resolution" : {
+            "width" : 1920,
+            "height" : 960
+        },
+        "sample_rate" : 29.97,
+        "encode_rate" : 15,
+        "bit_rate" : 2000000,
+        "i_frame_interval" : 2
+    }
+}

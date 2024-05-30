@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="57f1dfed-c731-48c6-9def-eed3e2b6648b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.openapi-generator/FILES" beforeDir="false" afterPath="$PROJECT_DIR$/.openapi-generator/FILES" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/APITokenIntrospectionResponse.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/APITokenIntrospectionResponse.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/AuthProjectsApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/AuthProjectsApi.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/CreateUserAPITokenRequest.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/CreateUserAPITokenRequest.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Edge.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Edge.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Group.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Group.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ISCPTicket.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ISCPTicket.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Job.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Job.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Jpeg.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Jpeg.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/MP4.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/MP4.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/MeasCreate.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/MeasCreate.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/MeasReplace.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/MeasReplace.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/MeasUploadingMeasurementsApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/MeasUploadingMeasurementsApi.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Measurement.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Measurement.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/MeasurementSequenceGroup.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/MeasurementSequenceGroup.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/MediaMeasurement.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/MediaMeasurement.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Member.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Member.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Project.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Project.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ProjectEdge.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ProjectEdge.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Role.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Role.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Scope.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Scope.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/User.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/User.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/UserAPIToken.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/UserAPIToken.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/UserEmail.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/UserEmail.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/UserEmailVerification.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/UserEmailVerification.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/UserPassword.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/UserPassword.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Video.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Video.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aptpod/ApiClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aptpod/ApiClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aptpod/ApiException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aptpod/ApiException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aptpod/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aptpod/Configuration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aptpod/JSON.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aptpod/JSON.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aptpod/Pair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aptpod/Pair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aptpod/StringUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aptpod/StringUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aptpod/auth/ApiKeyAuth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aptpod/auth/ApiKeyAuth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aptpod/auth/HttpBearerAuth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aptpod/auth/HttpBearerAuth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aptpod/auth/OAuth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aptpod/auth/OAuth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aptpod/auth/OAuthFlow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aptpod/auth/OAuthFlow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aptpod/intdash/AuthProjectsApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aptpod/intdash/AuthProjectsApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aptpod/intdash/MeasUploadingMeasurementsApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aptpod/intdash/MeasUploadingMeasurementsApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/APITokenIntrospectionRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/APITokenIntrospectionRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/APITokenIntrospectionResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/APITokenIntrospectionResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/AbstractOpenApiSchema.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/AbstractOpenApiSchema.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/AddGroupMemberRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/AddGroupMemberRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/AddProjectEdgeRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/AddProjectEdgeRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/AddProjectMemberRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/AddProjectMemberRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/AllowedEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/AllowedEndpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/AllowedISCPMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/AllowedISCPMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/AssignOwnerRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/AssignOwnerRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/AuthPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/AuthPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/ChangePasswordRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/ChangePasswordRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/CheckAuthorizationResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/CheckAuthorizationResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/CheckHTTPAuthorizationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/CheckHTTPAuthorizationRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/CheckMeHTTPAuthorizationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/CheckMeHTTPAuthorizationRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/CheckPasswordRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/CheckPasswordRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/CheckPasswordResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/CheckPasswordResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/CheckPasswordResultErrorsInner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/CheckPasswordResultErrorsInner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/CreateEdgeRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/CreateEdgeRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/CreateEmailRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/CreateEmailRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/CreateGroupRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/CreateGroupRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/CreateJobRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/CreateJobRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/CreateJpegRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/CreateJpegRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/CreateMP4Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/CreateMP4Request.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/CreateMeasurementChunksResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/CreateMeasurementChunksResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/CreateMeasurementChunksResultItemsInner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/CreateMeasurementChunksResultItemsInner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/CreateMyOAuth2ClientRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/CreateMyOAuth2ClientRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/CreateOAuth2ClientAuthorizationCodeRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/CreateOAuth2ClientAuthorizationCodeRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/CreateOAuth2ClientAuthorizationCodeRequestAllOf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/CreateOAuth2ClientAuthorizationCodeRequestAllOf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/CreateOAuth2ClientClientCredentialsRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/CreateOAuth2ClientClientCredentialsRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/CreateProjectRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/CreateProjectRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/CreateSignalRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/CreateSignalRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/CreateUserAPITokenRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/CreateUserAPITokenRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/CreateUserRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/CreateUserRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/DataID.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/DataID.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/DataIDs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/DataIDs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/DataPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/DataPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/DataPointDataError.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/DataPointDataError.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/DataPointDataErrorData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/DataPointDataErrorData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/DataPointDataID.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/DataPointDataID.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/DataPointDataIDs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/DataPointDataIDs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/DataPointError.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/DataPointError.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/DataPointErrorAllOf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/DataPointErrorAllOf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/DataPointNormal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/DataPointNormal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/DataPointTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/DataPointTime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/DeniedEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/DeniedEndpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/Edge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/Edge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/EdgeConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/EdgeConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/EdgeConnectionAllOf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/EdgeConnectionAllOf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/EdgeConnectionDownstream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/EdgeConnectionDownstream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/EdgeConnectionEdge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/EdgeConnectionEdge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/EdgeConnectionItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/EdgeConnectionItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/EdgeConnectionList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/EdgeConnectionList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/EdgeConnectionListPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/EdgeConnectionListPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/EdgeConnectionUpstream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/EdgeConnectionUpstream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/EdgeOwner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/EdgeOwner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/Edges.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/Edges.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/ErrorConverted.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/ErrorConverted.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/ErrorConvertedAllOf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/ErrorConvertedAllOf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/ErrorConvertedAllOfErrorExtra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/ErrorConvertedAllOfErrorExtra.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/ErrorExtraEmpty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/ErrorExtraEmpty.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/ErrorProblem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/ErrorProblem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/ErrorProblemMedia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/ErrorProblemMedia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/GetVersion200Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/GetVersion200Response.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/Group.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/Group.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/Groups.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/Groups.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/HLS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/HLS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/HLSList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/HLSList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/ISCPTicket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/ISCPTicket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/IssueToken200Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/IssueToken200Response.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/JSONWebKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/JSONWebKey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/Job.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/Job.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/JobList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/JobList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/Jpeg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/Jpeg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/Jpegs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/Jpegs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MP4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MP4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MP4s.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MP4s.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasBaseTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasBaseTime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasBaseTimePut.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasBaseTimePut.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasBaseTimes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasBaseTimes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasCreate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasCreate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasReplace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasReplace.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/Measurement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/Measurement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasurementJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasurementJob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasurementJobs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasurementJobs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasurementMarker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasurementMarker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasurementMarkerBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasurementMarkerBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasurementMarkerDetailPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasurementMarkerDetailPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasurementMarkerDetailRange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasurementMarkerDetailRange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasurementMarkerPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasurementMarkerPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasurementMarkerPointAllOf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasurementMarkerPointAllOf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasurementMarkerPostRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasurementMarkerPostRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasurementMarkerPostRequestPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasurementMarkerPostRequestPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasurementMarkerPostRequestRange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasurementMarkerPostRequestRange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasurementMarkerPutRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasurementMarkerPutRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasurementMarkerPutRequestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasurementMarkerPutRequestBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasurementMarkerPutRequestPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasurementMarkerPutRequestPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasurementMarkerPutRequestRange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasurementMarkerPutRequestRange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasurementMarkerRange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasurementMarkerRange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasurementMarkerRangeAllOf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasurementMarkerRangeAllOf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasurementMarkers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasurementMarkers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasurementMarkersWithoutPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasurementMarkersWithoutPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasurementSectionGetResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasurementSectionGetResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasurementSectionsGetResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasurementSectionsGetResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasurementSequenceGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasurementSequenceGroup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasurementSequenceGroupReplace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasurementSequenceGroupReplace.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasurementSequenceGroups.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasurementSequenceGroups.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasurementSequencesSummary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasurementSequencesSummary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasurementUploadPostResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasurementUploadPostResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasurementUploadStatusGetResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasurementUploadStatusGetResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasurementUploadStatusesGetResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MeasurementUploadStatusesGetResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/Measurements.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/Measurements.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MediaMeasurement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/MediaMeasurement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/Members.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/Members.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/OAuth2Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/OAuth2Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/OAuth2ClientWithSecret.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/OAuth2ClientWithSecret.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/OAuth2ClientWithSecretAllOf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/OAuth2ClientWithSecretAllOf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/OAuth2Clients.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/OAuth2Clients.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/OAuth2JWKs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/OAuth2JWKs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/Page.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/PageDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/PageDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/PageV2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/PageV2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/PatchEdgeRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/PatchEdgeRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/PatchEmailRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/PatchEmailRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/PatchUserRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/PatchUserRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/Playlist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/Project.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/ProjectEdge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/ProjectEdge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/ProjectEdges.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/ProjectEdges.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/Projects.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/Projects.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/Roles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/Roles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/Scope.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/Scope.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/Scopes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/Scopes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/SequenceSummary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/SequenceSummary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/Signal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/Signal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/SignalConversion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/SignalConversion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/SignalConversionCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/SignalConversionCSV.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/SignalConversionJSON.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/SignalConversionJSON.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/SignalConversionNumFixedPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/SignalConversionNumFixedPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/SignalConversionNumFloatingPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/SignalConversionNumFloatingPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/SignalConversionOptionCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/SignalConversionOptionCSV.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/SignalConversionOptionJSON.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/SignalConversionOptionJSON.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/SignalConversionOptionNumFixedPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/SignalConversionOptionNumFixedPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/SignalConversionOptionNumFloatingPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/SignalConversionOptionNumFloatingPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/SignalConversionOptionSubBytes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/SignalConversionOptionSubBytes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/SignalConversionOptionSubString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/SignalConversionOptionSubString.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/SignalConversionSubBytes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/SignalConversionSubBytes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/SignalConversionSubString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/SignalConversionSubString.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/SignalDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/SignalDisplay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/Signals.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/Signals.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/TrashedMeasurements.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/TrashedMeasurements.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/UpdateEmailVerifiedRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/UpdateEmailVerifiedRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/UpdateGroupMemberRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/UpdateGroupMemberRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/UpdateGroupRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/UpdateGroupRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/UpdateOAuth2ClientRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/UpdateOAuth2ClientRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/UpdateProjectEdgeRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/UpdateProjectEdgeRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/UpdateProjectMemberRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/UpdateProjectMemberRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/UpdateProjectRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/UpdateProjectRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/UpdateSignalRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/UpdateSignalRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/UpdateUserAPITokenRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/UpdateUserAPITokenRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/UserAPIToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/UserAPIToken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/UserAPITokens.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/UserAPITokens.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/UserEmail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/UserEmail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/UserEmailVerification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/UserEmailVerification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/UserPassword.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/UserPassword.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/Users.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/Video.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/Video.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/Videos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/model/Videos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/aptpod/intdash/AuthProjectsApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/aptpod/intdash/AuthProjectsApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/aptpod/intdash/MeasUploadingMeasurementsApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/aptpod/intdash/MeasUploadingMeasurementsApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/openapitools/client/model/APITokenIntrospectionResponseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/openapitools/client/model/APITokenIntrospectionResponseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/openapitools/client/model/CreateUserAPITokenRequestTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/openapitools/client/model/CreateUserAPITokenRequestTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/openapitools/client/model/EdgeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/openapitools/client/model/EdgeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/openapitools/client/model/GroupTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/openapitools/client/model/GroupTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/openapitools/client/model/ISCPTicketTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/openapitools/client/model/ISCPTicketTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/openapitools/client/model/JobTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/openapitools/client/model/JobTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/openapitools/client/model/JpegTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/openapitools/client/model/JpegTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/openapitools/client/model/MP4Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/openapitools/client/model/MP4Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/openapitools/client/model/MeasCreateTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/openapitools/client/model/MeasCreateTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/openapitools/client/model/MeasReplaceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/openapitools/client/model/MeasReplaceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/openapitools/client/model/MeasurementSequenceGroupTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/openapitools/client/model/MeasurementSequenceGroupTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/openapitools/client/model/MeasurementTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/openapitools/client/model/MeasurementTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/openapitools/client/model/MediaMeasurementTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/openapitools/client/model/MediaMeasurementTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/openapitools/client/model/MemberTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/openapitools/client/model/MemberTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/openapitools/client/model/ProjectEdgeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/openapitools/client/model/ProjectEdgeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/openapitools/client/model/ProjectTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/openapitools/client/model/ProjectTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/openapitools/client/model/RoleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/openapitools/client/model/RoleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/openapitools/client/model/ScopeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/openapitools/client/model/ScopeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/openapitools/client/model/UserAPITokenTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/openapitools/client/model/UserAPITokenTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/openapitools/client/model/UserEmailTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/openapitools/client/model/UserEmailTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/openapitools/client/model/UserEmailVerificationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/openapitools/client/model/UserEmailVerificationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/openapitools/client/model/UserPasswordTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/openapitools/client/model/UserPasswordTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/openapitools/client/model/UserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/openapitools/client/model/UserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/openapitools/client/model/VideoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/openapitools/client/model/VideoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iscp-proto" beforeDir="false" afterPath="$PROJECT_DIR$/../iscp-proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iscp/.idea/androidTestResultsUserPreferences.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../iscp/.idea/androidTestResultsUserPreferences.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iscp/.idea/deploymentTargetDropDown.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../iscp/.idea/deploymentTargetDropDown.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iscp/iscp-sample/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../iscp/iscp-sample/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iscp/iscp-sample/libs/intdash-v2.4.0-next-4a4316946.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../iscp/iscp-sample/libs/intdash-v2.4.0-next-4a4316946.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iscp/iscp-sample/src/androidTest/java/com/aptpod/iscp_sample/RealtimeApiTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../iscp/iscp-sample/src/androidTest/java/com/aptpod/iscp_sample/RealtimeApiTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iscp/iscp-sample/src/main/java/com/aptpod/iscp_sample/DateExtensions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../iscp/iscp-sample/src/main/java/com/aptpod/iscp_sample/DateExtensions.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iscp/iscp-sample/src/main/java/com/aptpod/iscp_sample/activities/main/MainActivity+Upstream.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../iscp/iscp-sample/src/main/java/com/aptpod/iscp_sample/activities/main/MainActivity+Upstream.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iscp/iscp-sample/src/main/java/com/aptpod/iscp_sample/activities/main_java/MainJavaActivity_Upstream.java" beforeDir="false" afterPath="$PROJECT_DIR$/../iscp/iscp-sample/src/main/java/com/aptpod/iscp_sample/activities/main_java/MainJavaActivity_Upstream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iscp/iscp-sample/src/main/java/com/aptpod/iscp_sample/backends/intdash_api/IntdashV2APIManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../iscp/iscp-sample/src/main/java/com/aptpod/iscp_sample/backends/intdash_api/IntdashV2APIManager.kt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2Vbnx4bDJJ5KFGIdEBhpREkRbAj" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "cidr.known.project.marker": "true",
+    "last_opened_file_path": "C:/WorkSpace/Android/iscp-kt/intdash"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="57f1dfed-c731-48c6-9def-eed3e2b6648b" name="Changes" comment="" />
+      <created>1695113890937</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1695113890937</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
